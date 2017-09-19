@@ -18,11 +18,14 @@ int main() {
     while (true) {
         cout << "What length of word do you want? ";
         cin >> n;
-        if (n == -1) break;
-
-        cout << "Here's a word: ";
-        cout << length_words[n][rand() % length_words[n].size()];
-        cout << endl;
+        if (n < 1) break;
+        else if(n > length_words.size()){
+            cout << "No words of size " << n << endl;
+        }else{
+            cout << "Here's a word: ";
+            cout << length_words[n][rand() % length_words[n].size()];
+            cout << endl;
+        }
     }
         
     return 0;
