@@ -23,7 +23,7 @@ using namespace std;
 /*************/
 /* CONSTANTS */
 /*************/
-static const int TEST_SIZE = 10000;	// how many trials will we time?
+static const int TEST_SIZE = 3500;	// how many trials will we time?
 
 
 /********/
