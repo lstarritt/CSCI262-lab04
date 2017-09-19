@@ -1,12 +1,12 @@
 /*
     lab04.cpp
 
-    Author: C. Painter-Wakefield
+    Author: Lane Starritt
 
-    Created: 9/14/2017
+    Created: 2017-09-19
 
-    Starter code for lab 4, provides initial code to load in a dictionary
-    of words, and run time tests on how long it takes to search for them.
+    lab04 as per the website, starting with the starter code, and doing as 
+    directed.
 */
 
 #include <iostream>
@@ -65,12 +65,13 @@ int main() {
     clock_t start, stop;  // stores the start/stop clock values
     int count;            // how many words did we find?
 
-	cout << "Timing Vector...";
+	cout << "Timing Set...";//Vector...";
     start = clock();
     /************** CODE TO BE TIMED ***************/
     count = 0;
     for (string s: test_words) {
-        if (find(words_vec.begin(), words_vec.end(), s) != words_vec.end()) count++;
+        if (words_set.find(s) != words_set.end()){count++;}
+        //if (find(words_vec.begin(), words_vec.end(), s) != words_vec.end()) count++;
     }
     /***********************************************/
     stop = clock();
